@@ -150,6 +150,8 @@ export function useReactMediaRecorder({
     if (!mediaStream.current) {
       getMediaStream();
     }
+
+    return stopRecording()
   }, [audio, screen, video, getMediaStream, mediaRecorderOptions]);
 
   // Media Recorder Handlers
